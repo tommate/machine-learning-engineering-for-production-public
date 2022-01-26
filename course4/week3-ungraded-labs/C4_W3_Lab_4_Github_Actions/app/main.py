@@ -19,6 +19,7 @@ class Wine(BaseModel):
 
 @app.post("/predict")
 def predict(wine: Wine):
+    """Dummy change."""
     batches = wine.batches
     np_batches = np.array(batches)
     pred = clf.predict(np_batches).tolist()
